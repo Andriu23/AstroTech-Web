@@ -1,0 +1,306 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+header, main, footer {
+    padding: 20px;
+}
+.header {
+    /*background-color: #001f3f;*/
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+}
+.header-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20%;
+    box-shadow: 0 0 20px gold;
+}
+.header-titulo {
+    color: #FFFFFF;
+    font-size: 35px;
+    flex-grow: 1;
+    text-align: center;
+}
+.header-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 2;
+}
+.header-nav-items {
+    color: #FFFFFF;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-decoration: none;
+    transition: transform 2s ease;
+}
+.header-nav-items:hover {
+    background-color: #FFFF00; 
+    color: #000000;
+    transform: scale(1.2);
+}
+.header-nav-items:active {
+    background-color: #357EDD;
+    color: #FFFFFF;
+    text-decoration: underline;
+    transform: scale(0.8);
+}
+.pagina {
+    background-color: #00BFFF;
+    padding: 8px 12px;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+.contenido-principal {
+    background: linear-gradient(to bottom, #000428, #004e92);
+    min-height: 75vh;
+    /*box-sizing: border-box;
+    background-image: url(../emb/img/fondo.avif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;*/
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-titulo { 
+    background-color: #FFFFFF80;
+    width: 100%;
+    color: #FFD700;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+.section-listas {
+    width: auto;
+    height: auto;
+    padding: 20px 30px;
+    margin: 20px 10px;
+    background-color: #FFFF0080; 
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-radius: 20px; 
+    box-shadow: 0 4px 20px #FFFFFF;
+}
+.lista {
+    background-color: #FFFFFF80;                
+    color: #001f3f;
+    padding: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;   
+    font-size: 18px;
+    transition: transform 0.5s ease;
+}
+.lista:hover {
+    transform: scale(1.05);
+}
+.lista-sublista {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    list-style-type: none;
+    border-radius: 6px;
+}
+.lista:first-child .lista-sublista li::before {
+    content: " 🛰 ";
+}
+.lista:last-child .lista-sublista li:nth-child(1)::before {
+    content: " 🔭 ";
+}
+.lista:last-child .lista-sublista li:nth-child(2)::before {
+    content: " 🗺 ";
+}
+.lista:last-child .lista-sublista li:nth-child(3)::before {
+    content: " 📖 ";
+}
+.lista:last-child .lista-sublista li:nth-child(4)::before {
+    content: " 🌌 ";
+}
+.lista-sublista a {
+    text-decoration: none;          
+    color: #000000;               
+    transition: color 0.3s ease; 
+}
+.lista-sublista a:hover {
+    color: #FFD700;
+}
+.servicios, .productos {
+    background-color: #FFFF0080;
+    width: auto;
+    margin: 10px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px #FFFFFF;
+}
+h3 {
+    color: #001f3f;
+    padding: 20px 0px;
+    font-size: 24px;               
+    font-weight: bold;                     
+    text-transform: uppercase;       
+    letter-spacing: 10px; 
+}
+.servicios-items {
+    background-color: #FFFFFF;
+    max-width: 500px;
+    min-height: 100px;
+    padding: 5px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    transition: transform 2s ease;
+    transition: outline 2s;
+    transition: background-color 2s ease;;
+    scroll-margin-top: 20vh;
+}
+.servicios-items:hover {
+    outline: 5px double #001f3f;
+    transform: scale(1.1);
+    background-color: #FFD700;
+}
+.servicios-items-titulo {
+    color: #001f3f;
+}
+.servicios-items-texto {
+    padding: 5px 20px;
+    text-align: justify;
+}
+.productos-catalogo {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+.productos-items {
+    background-image: url('../emb/img/fondo.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    max-width: 250px;
+    min-height: 300px;
+    height: auto;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+}
+.productos-items-img {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 2s ease;
+    border: 1px solid #FFFFFF;
+}
+.productos-items-img:hover {
+    transform: scale(1.1);
+}
+.productos-catalogo .productos-items:first-child .productos-items-img {
+    background-image: url('../emb/img/telescopios.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.productos-catalogo .productos-items:nth-child(2) .productos-items-img {
+    background-image: url('../emb/img/mapas_estelares.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.productos-catalogo .productos-items:nth-child(3) .productos-items-img {
+    background-image: url('../emb/img/libros_de_astronomía.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.productos-catalogo .productos-items:last-child .productos-items-img {
+    background-image: url('../emb/img/maquetas_del_sistema_solar.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer {
+    /*background-color: #001f3f;*/
+    background-color: #000000;
+    color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+.footer-texto-curso {
+    color: #FFD700;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: overline;
+}
+fieldset {
+    padding: 2px 5px;
+    padding: 5px 10px;
+}
+label:has(input:invalid) {
+    color: red;
+}
+label:has(input:valid) {
+    color: green;
+}
+.footer-texto-correo {
+    background-color: #FFFFFF;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.footer-texto-correo:hover {
+    background-color: #FFFF00;
+}
+.footer-texto-correo-a {
+    color: #000000;
+    text-decoration: none;
+}
+@media screen and (max-width: 480px) {
+    .header {
+        gap: 10px;
+    }
+    .header-nav {
+        flex-direction: column;
+
+    }
+}

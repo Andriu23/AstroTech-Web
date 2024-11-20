@@ -1,0 +1,772 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    min-height: 15vh;
+    background-color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.header-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20%;
+    box-shadow: 0 0 20px gold;
+}
+
+.header-titulo {
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.navegador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    border-radius: 20px;
+}
+
+.navegador-items {
+    color: #FFFFFF;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: transform 2s ease;
+}
+
+.navegador-items:hover {
+    background-color: #FFFF00; 
+    color: #000000;
+    transform: scale(1.2);
+}
+
+.navegador-items:active {
+    background-color: #357EDD;
+    color: #FFFFFF;
+    text-decoration: underline;
+    transform: scale(0.8);
+}
+
+.pagina {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 8px 12px;
+    color: #001f3f;
+    font-size: 18px;
+}
+
+.contenido-principal {
+    min-height: 75vh;
+    background: linear-gradient(rgba(0, 8, 64, 0.2), rgba(0, 36, 128, 0.2)), url(https://images.unsplash.com/photo-1451187580459-43490279c0fa);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.section {
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.scroll_nav {
+    background-color: linear-gradient(to bottom, #000428, #004e92);
+    width: 90%;
+    min-height: 80px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-titulo {
+    width: 100%;
+    padding: 5px;
+    background-color: #FFFFFF80;
+    color: #FFD700;
+    font-size: 25px;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.scroll_nav_section {
+    padding: 5px;
+    background: linear-gradient(to bottom, rgba(0, 4, 40, 0.5), rgba(0, 78, 146, 0.5));
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.scroll_nav_a {
+    color: #FFFFFF;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.scroll_nav_a:hover {
+    background-color: #FFFFFF;
+    color: #357EDD;
+}
+
+#Galeria, #Formulario{
+    scroll-margin-top: 15vh;
+}
+#Portafolio, #Panorama {
+    scroll-margin-top: 17vh;
+}
+
+.container {
+    max-width: 90%;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: minmax(250px, 1fr);
+    grid-auto-flow: dense;
+    grid-gap: 20px;
+}
+
+.astronomía {
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); 
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.astronomía:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.8);
+    opacity: 0.8;
+}
+
+.descripcion_contenido {
+    background-color: #00000080;
+    max-width: 80%;
+    padding: 20px;
+    margin: 15px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    box-shadow: 0 4px 20px #FFFFFF;
+    border-radius: 20px;
+}
+
+.descripcion_contenido_titulo {
+    font-size: 24px;
+    color: #FFFF00;
+}
+
+.descripcion_contenido_texto{
+    text-align: justify;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.descripcion_contenido_texto_palabra {
+    color: #FFFF00;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.contenedor_planetas {
+    width: 90%;
+    padding: 20px auto;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contenedor_planetas_title {
+    padding: 20px 0px;
+    color: #FFFF00;
+    font-size: 24px; 
+    font-weight: bold;
+}
+
+.contenedor_planetas_box {
+    background-color: linear-gradient(to right, rgba(0, 4, 40, 0), rgba(0, 4, 40, 1));
+    color: #FFFF00;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px #FFFFFF;
+    transition: box-shadow 2s ease;  
+}
+
+.contenedor_planetas_box:hover {
+    box-shadow: 0 8px 20px #FFFF00;
+}
+
+.planet_location {
+    list-style: none;
+    width: 80%;
+    padding: 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    transition: transform 2s ease;  
+}
+
+.planet_location:hover {
+    transform: scale(1.2);
+}
+
+.planet_location::before {
+    content: "";
+    background-size: cover; 
+    background-repeat: no-repeat;
+    width: 50px; 
+    height: 50px; 
+    margin-right: 10px; 
+}
+
+.planet_location:first-child .loading_bar{
+    border: 2px solid #6e6e6e;
+}
+
+.planet_location:first-child::before {
+    background-image: url('../emb/planetas/mercurio.png');
+}
+
+.planet_location:nth-child(2) .loading_bar{
+    border: 2px solid #d4af37;
+}
+
+.planet_location:nth-child(2)::before {
+    background-image: url('../emb/planetas/venus.png');
+}
+
+.planet_location:nth-child(3) .loading_bar{
+    border: 2px solid #2a8bd2;
+}
+
+.planet_location:nth-child(3)::before {
+    background-image: url('../emb/planetas/planeta-tierra.png');
+}
+
+.planet_location:nth-child(4) .loading_bar{
+    border: 2px solid #d14a28;
+}
+
+.planet_location:nth-child(4)::before {
+    background-image: url('../emb/planetas/marte.png');
+}
+
+.planet_location:nth-child(5) .loading_bar{
+    border: 2px solid #d9a066;
+}
+
+.planet_location:nth-child(5)::before {
+    background-image: url('../emb/planetas/jupiter.png');
+}
+
+.planet_location:nth-child(6) .loading_bar{
+    border: 2px solid #f8e473;
+}
+
+.planet_location:nth-child(6)::before {
+    background-image: url('../emb/planetas/saturno.png');
+}
+
+.planet_location:nth-child(7) .loading_bar{
+    border: 2px solid #6bc2d1;
+}
+
+.planet_location:nth-child(7)::before {
+    background-image: url('../emb/planetas/urano.png');
+}
+
+.planet_location:last-child .loading_bar{
+    border: 2px solid #fcd440;
+}
+
+.planet_location:last-child::before {
+    background-image: url('../emb/planetas/neptuno.png');
+}
+
+.loading_bar {
+    width: 60%;
+    padding: 2px;
+    margin-right: 10px;
+    margin-left: 0;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.load_bar {
+    width: 0%;
+    padding: 2px 0px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.diametro_3\.49 {
+    background: linear-gradient(to right, #6e6e6e, #8a8a8a);
+    color: #ffffff;
+    animation: mercurio-bar 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 3;
+}
+@keyframes mercurio-bar {
+    to {
+        width: 3.49%;
+    }
+}
+
+.diametro_8\.66 {
+    background: linear-gradient(to right, #f4d03f, #f9e79f);
+    color: #6e4b0f;
+    animation: venus-bar 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 3;
+}
+@keyframes venus-bar {
+    to {
+        width: 8.66%;
+    }
+}
+
+.diametro_9\.11 {
+    background: linear-gradient(to right, #1e90ff, #76c7c0); 
+    color: #ffffff;
+    animation: tierra-bar 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 3;
+    
+}
+@keyframes tierra-bar {
+    to {
+        width: 9.11%;
+    }
+}
+
+.diametro_4\.85 {
+    background: linear-gradient(to right, #ff4500, #a52a2a);
+    color: #ffffff;
+    animation: marte-bar 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 3;
+}
+@keyframes marte-bar {
+    to {
+        width: 4.85%;
+    }
+}
+
+.diametro_100 {
+    background: linear-gradient(to right, #d2b48c, #ffdead);
+    color: #5e2605;
+    animation: jupiter-bar 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 3;
+}
+@keyframes jupiter-bar {
+    to {
+        width: 100%;
+    }
+}
+
+.diametro_83\.38 {
+    background: linear-gradient(to right, #f5deb3, #e3c565);
+    color: #5e4b2c;
+    animation: saturno-bar 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 3;
+}
+@keyframes saturno-bar {
+    to {
+        width: 83.38%;
+    }
+}
+
+.diametro_36\.25 {
+    background: linear-gradient(to right, #7fffd4, #4682b4);
+    color: #1e2e30;
+    animation: urano-bar 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 3;
+}
+@keyframes urano-bar {
+    to {
+        width: 36.25%;
+    }
+}
+
+.diametro_35\.23 {
+    background: linear-gradient(to right, #fcd440, #e3b636, #fdea78);
+    color: #4f4f4f;
+    animation: neptuno-bar 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 3;
+}
+@keyframes neptuno-bar {
+    to {
+        width: 35.23%;
+    }
+}
+
+.Diametro_km {
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+    margin-right: 20px;
+    color: #00BFFF;
+}
+
+.location_planet-name {
+    padding: 2px 5px;
+    color: #ffffff;
+    letter-spacing: 2px;  
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.location_planet-name::first-letter {
+    font-size: 20px;
+}
+
+.portafolio {
+    width: 80%;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: linear-gradient(to right, rgba(0, 4, 40, 0), rgba(0, 4, 40, 1));
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px #FFFFFF;
+    transition: box-shadow 2s ease; 
+}
+
+.portafolio:hover {
+    box-shadow: 0 8px 20px #FFFF00;
+}
+
+.portafolio_titulo {
+    color: #fcd440;
+    font-size: 32px;
+}
+
+.portafolio_project_container {
+    width: 95%;
+    min-height: 80vh;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    grid-auto-rows: minmax(100px ,1fr);
+    grid-auto-flow: dense;
+    gap: 25px;
+}
+
+.portafolio_project {
+    background-size: cover;
+    background-position: center;
+    place-content: center;
+    border-radius: 16px;
+    place-items: center;
+    transition: transform 2s ease; 
+}
+
+.portafolio_project:hover {
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+.portafolio_project:first-child {
+    /*background-image: linear-gradient(#0002, #0009), url(../emb/project/Perseverance_Rover.jfif);
+    */grid-column: span 2;
+}
+
+.portafolio_project:nth-child(2) {
+    background-image: linear-gradient(#0002, #0009);
+}
+
+.portafolio_project:nth-child(3) {
+    background-image: linear-gradient(#0002, #0009);
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.portafolio_project:nth-child(4) {
+    background-image: linear-gradient(#0002, #0009);
+    grid-column: span 2;
+    grid-row:  span 2;
+}
+
+.portafolio_project:nth-child(5) {
+    background-image: linear-gradient(#0002, #0009);
+}
+
+.portafolio_project:nth-child(6) {
+    background-image: linear-gradient(#0002, #0009);
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.portafolio_project:nth-child(7) {
+    background-image: linear-gradient(#0002, #0009);
+    grid-column: span 2;
+    grid-row: span 2;
+
+}
+
+.portafolio_project:nth-child(8) {
+    background-image: linear-gradient(#0002, #0009);
+    grid-column: span 2;
+}
+
+.portafolio_project:nth-child(9) {
+    background-image: linear-gradient(#0002, #0009);
+}
+
+.portafolio_project:last-child {
+    background-image: linear-gradient(#0002, #0009);
+    grid-column: span 5;
+}
+
+.formulario {
+    background-color: #f0f0f0;
+    width: 50%;
+    padding: 5px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #FFFFFF;
+}
+
+#contacto {
+    padding: 10px 0px;
+    font-size: 24px;
+    display: grid;
+    place-items: center;
+}
+
+.fieldset {
+    width: 90%;
+    padding: 20px 0px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: none;
+}
+
+.legend {
+    padding: 2px 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #00008b33;
+    color: #ffffff;
+    text-align: start !important; 
+}
+
+.fieldset label {
+    min-height: 20px;
+    font-size: 16px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.fieldset input {
+    min-height: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-left: 2px double #357EDD;
+}
+
+select > option {
+    min-height: 20px;
+    background-color: #ffff0080; 
+    padding: 5px 15px;
+    font-size: 15px;
+}
+
+textarea {
+    width: auto;
+    min-height: 100px;
+    padding: 15px;
+    border-left: 2px double #357EDD;
+    resize: vertical;
+    font-family: sans-serif;
+    font-style: oblique;
+}
+
+.formulario input[type="submit"] {
+    margin: 10px auto;
+    background-color: rgba(0, 0, 139, 1);
+    color: rgba(255, 255, 0, 1);
+    padding: 10px 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.formulario input[type="submit"]:hover {
+    animation: neon 3s infinite alternate backwards;
+}
+@keyframes neon {
+    0% {
+        border: 2px solid red;
+        background-color: yellow;
+        color: red;
+    } 
+    50% {
+        border: 2px solid yellow;
+        background-color: yellowgreen;
+        color: yellow;
+    }
+    100% {
+        border: 2px solid white;
+        background-color: green;
+        color: white;
+    }
+}
+
+.formulario input[type="submit"]:active {
+    background-color: #45a049;
+    color: #FFFFFF;
+}
+
+table {
+    margin: 20px 0px;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 30px #FFFFFF;
+}
+
+th, td {
+    border: 1px solid rgba(255, 255, 0, 0.7); 
+    padding: 10px;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 1);
+    font-size: 18px;
+}
+
+td {
+    background-color: #f0f8ff;
+    font-size: 16px;
+}
+
+tr a {
+    text-decoration: none;
+    color: rgba(0, 0, 139, 1)
+}
+
+tr a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    width: 100%;
+    min-height: 10vh;
+     /*background-color: #001f3f;*/
+     background-color: #000000;
+     color: #FFFFFF;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+     gap: 15px; 
+     justify-items: center; 
+     align-items: center;
+}
+
+.footer-texto-curso {
+    color: #FFD700;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: overline;
+}
+
+fieldset {
+    padding: 2px 5px;
+    padding: 5px 10px;
+}
+
+label:has(input:invalid) {
+    color: red;
+}
+
+label:has(input:valid) {
+    color: green;
+}
+
+.footer-texto-correo {
+    background-color: #FFFFFF;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.footer-texto-correo:hover {
+    background-color: #FFFF00;
+}
+
+.footer-texto-correo-a {
+    color: #000000;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) { 
+
+    .portafolio_project {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .portafolio_project:last-child {
+        grid-column:  span 4;
+    }
+}
+
+@media only screen and (max-width: 540px) { 
+    .navegador {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}

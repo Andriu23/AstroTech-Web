@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/contacto.css">
+    <link rel="shortcut icon" href="../emb/img/logo.png" type="image/x-icon">
+    <script type="module" src="../src/script.js"></script>
+    <script type="module" src="../src/plants.js"></script>
+    <script type="module" src="../src/projects.js"></script>
+    <title>Astronomía Universal | Contacto</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header-img" src="../emb/img/logo.png" alt="" id="logo">
+        <h1 class="header-titulo">Astronomía Universal</h1>
+        <nav class="navegador">
+            <a href="../index.html" class="navegador-items">Inicio</a>
+            <a href="./nosotros.html" class="navegador-items">Nosotros</a>
+            <a href="./servicios.html" class="navegador-items">Servicios</a>
+            <a href="#" class="navegador-items pagina">Contacto</a>
+        </nav>
+    </header>
+    <main class="contenido-principal">
+        <section class="section">
+            <div class="scroll_nav">
+                <h2 class="section-titulo">Contacto Estelar</h2>
+                <nav class="scroll_nav_section">
+                    <a href="#Galeria" class="scroll_nav_a">Galeria</a>
+                    <a href="#Panorama" class="scroll_nav_a">Diámetro Planetario</a>
+                    <a href="#Portafolio" class="scroll_nav_a">Portafolio</a>
+                    <a href="#Formulario" class="scroll_nav_a">Formulario</a>
+                </nav>
+            </div>
+            <figure class="container" id="Galeria">
+            </figure>
+            <article class="descripcion_contenido">
+                <h2 class="descripcion_contenido_titulo">Astronomía Universal</h2>
+                <p class="descripcion_contenido_texto">Es una institución dedicada a la <span class="descripcion_contenido_texto_palabra">investigación</span> y la <span class="descripcion_contenido_texto_palabra">innovación </span>en el campo de la astronomía. 
+                </p><p class="descripcion_contenido_texto">Se enfocaría en el estudio avanzado del universo, con énfasis en la exploración espacial, astrofísica y las últimas misiones científicas. Ofrecería programas de formación para investigadores y profesionales, promoviendo la participación en proyectos de vanguardia y el uso de tecnologías innovadoras en la observación del cosmos.</p>
+            </article>
+            <section class="contenedor_planetas" id="Panorama">
+                <h2 class="contenedor_planetas_title">Panorama Planetario - Diámetro (km)</h2>
+                <ul class="contenedor_planetas_box" id="planetas_box">
+                </ul>
+            </section>
+            <section class="portafolio" id="Portafolio">
+                <h3 class="portafolio_titulo">Portafolio de Proyectos</h3>
+                <div class="portafolio_project_container" id="project_container">
+                </div>
+            </section>
+            <form action="" class="formulario" id="Formulario">
+                <h2 id="contacto">Formulario de Registro</h2>
+                <fieldset class="fieldset">
+                    <legend class="legend">Información Básica</legend>
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" name="nombre" id="nombre" minlength="15">
+                    <label for="Email">Email:</label>
+                    <input type="email" name="email" id="Email">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" name="telefono" id="telefono">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" name="direccion" id="direccion" minlength="10">
+                    <label for="astronomía">Intereses Astronómicos:</label>
+                    <select name="Interes" id="astronomía">
+                        <option value="observacion">Observación de Estrellas</option>
+                        <option value="fotografia">Fotografía Astronómica</option>
+                        <option value="investigacion">Investigación Científica</option>
+                        <option value="educacion">Educación y Divulgación</option>
+                        <option value="astrofisica">Astrofísica</option>
+                        <option value="cosmologia">Cosmología</option>
+                        <option value="astrobiologia">Astrobiología</option>
+                        <option value="tecnologia">Tecnología Espacial</option>
+                        <option value="exploracion">Exploración Planetaria</option>
+                    </select>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend class="legend">Información Contacto</legend>
+                    <label for="medio">Medio de Contacto</label>
+                    <input list="comunicación" id="medio">
+                    <datalist id="comunicación">
+                        <option value="Télefono">Comunicación por Teléfono</option>
+                        <option value="Email">Comunicación por Email</option>
+                        <option value="Whatsapp">Comunicación por Whatsapp</option>
+                    </datalist>
+                    <label for="texto">Mensaje:</label>
+                    <textarea name="textarea" id="texto" placeholder= "Escribe tu mensaje aquí..."></textarea>
+                </fieldset>
+                <input type="submit" value="Enviar">
+            </form>
+            <table>
+                <tr>
+                    <th colspan="2">Información de Contacto</th>
+                </tr>
+                <tr>
+                    <th>Correo electrónico</th>
+                    <th>Teléfono</th>
+                </tr>
+                <tr>
+                    <td><a href="mailto:contacto@cauuniverso.org">contacto@cauuniverso.org</a></td>
+                    <td><a href="tel:+00123456789">00 123 456 789</a></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer class="footer"><p class="footer-texto">Desarrollo Full Stack <span class="footer-texto-curso">DWFSH1-276</span></p>
+        <form class="footer-formulario">
+            <fieldset>
+                <legend>¡Suscribirse al centro!</legend>
+                <label for="email">Email:<input type="email" id="email" name="Email" required></label>
+                <input type="submit" value="¡Suscribirme!">
+            </fieldset>
+        </form>
+        <p class="footer-texto-correo">📧<a class="footer-texto-correo-a" href="mailto:info@astronomiauniversal.com">info@astronomiauniversal.com</a></p>
+    </footer>
+</body>
+</html>
