@@ -75,31 +75,22 @@ body {
 }
 
 button { 
-    background-color: #1E90FF; /* Azul cielo */ 
-    border: 2px solid #00BFFF; /* Azul más claro */ 
+    background-color: #FF6347; /* Azul cielo */ 
+    border: none; /* Azul más claro */ 
     color: white; 
     padding: 15px 25px; 
     text-align: center; 
-    text-decoration: none; 
     display: inline-block; 
     font-size: 18px; 
     margin: 10px 2px; 
     cursor: pointer; 
     border-radius: 12px; 
-    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5); /* Resplandor */
-}
-
-button a { 
-    color: white; 
-    text-decoration: none;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5); /* Resplandor */
 }
 
 button:hover { 
-    background-color: #00BFFF; /* Azul más claro al pasar el ratón */
-}
-
-button a:hover { 
-    text-decoration: underline;
+    background-color: #ff4500; /* Azul más claro al pasar el ratón */
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
 }
 
 button:active { 
@@ -272,81 +263,14 @@ button:active {
     transition: transform 2s ease;  
 }
 
-.planet_location:hover {
-    transform: scale(1.2);
-}
-
-.planet_location::before {
-    content: "";
-    background-size: cover; 
-    background-repeat: no-repeat;
-    width: 50px; 
-    height: 50px; 
+img {
+    width: 80px; 
+    height: 80px; 
     margin-right: 10px; 
 }
 
-.planet_location:first-child .loading_bar{
-    border: 2px solid #6e6e6e;
-}
-
-.planet_location:first-child::before {
-    background-image: url('../emb/planetas/mercurio.png');
-}
-
-.planet_location:nth-child(2) .loading_bar{
-    border: 2px solid #d4af37;
-}
-
-.planet_location:nth-child(2)::before {
-    background-image: url('../emb/planetas/venus.png');
-}
-
-.planet_location:nth-child(3) .loading_bar{
-    border: 2px solid #2a8bd2;
-}
-
-.planet_location:nth-child(3)::before {
-    background-image: url('../emb/planetas/planeta-tierra.png');
-}
-
-.planet_location:nth-child(4) .loading_bar{
-    border: 2px solid #d14a28;
-}
-
-.planet_location:nth-child(4)::before {
-    background-image: url('../emb/planetas/marte.png');
-}
-
-.planet_location:nth-child(5) .loading_bar{
-    border: 2px solid #d9a066;
-}
-
-.planet_location:nth-child(5)::before {
-    background-image: url('../emb/planetas/jupiter.png');
-}
-
-.planet_location:nth-child(6) .loading_bar{
-    border: 2px solid #f8e473;
-}
-
-.planet_location:nth-child(6)::before {
-    background-image: url('../emb/planetas/saturno.png');
-}
-
-.planet_location:nth-child(7) .loading_bar{
-    border: 2px solid #6bc2d1;
-}
-
-.planet_location:nth-child(7)::before {
-    background-image: url('../emb/planetas/urano.png');
-}
-
-.planet_location:last-child .loading_bar{
-    border: 2px solid #fcd440;
-}
-
-.planet_location:last-child::before {
-    background-image: url('../emb/planetas/neptuno.png');
+.planet_location:hover {
+    transform: scale(1.2);
 }
 
 .loading_bar {
@@ -360,7 +284,7 @@ button:active {
 
 .load_bar {
     width: 0%;
-    padding: 2px 0px;
+    padding: 10px 0px;
     font-weight: bold;
     border-radius: 2px;
 }
@@ -481,9 +405,14 @@ button:active {
 .Diametro_km {
     display: flex;
     gap: 10px;
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 20px;
     color: #00BFFF;
+}
+
+span {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .location_planet-name {

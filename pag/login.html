@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="shortcut icon" href="../emb/img/logo.png" type="image/x-icon">
+    <script type="module" src="../src/login/user.js"></script>
+    <title>Astronomía Universal</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header-img" src="../emb/img/logo.png" alt="" id="logo">
+        <h1 class="header-titulo">Astronomía Universal</h1>
+        <nav class="navegador">
+            <a href="../index.html" class="navegador-items">Inicio</a>
+        </nav>
+        <button onclick="location.href='#email_login'">Login</button>
+    </header>
+    <main class="contenido-principal">
+        <form action="" class="formulario" id="Formulario_Login">
+            <h2 id="contacto">Login</h2>
+            <fieldset class="fieldset">
+                <label for="email_login">Email:</label>
+                <input type="email" name="email" id="email_login" placeholder="ander.admin@example.com">
+                <label for="password_login">Password</label>
+                <input type="password" name="password" id="password_login" minlength="8" placeholder="********">
+            </fieldset>
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+    </main>
+    <footer class="footer"><p class="footer-texto">Desarrollo Full Stack <span class="footer-texto-curso">DWFSH1-276</span></p>
+        <p class="footer-texto-correo">📧<a class="footer-texto-correo-a" href="mailto:info@astronomiauniversal.com">info@astronomiauniversal.com</a></p>
+    </footer>
+</body>
+</html>

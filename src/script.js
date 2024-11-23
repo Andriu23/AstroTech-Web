@@ -1,7 +1,7 @@
-import { fetchPlantsData, getDataPlants } from './plants.js'; 
-import { fetchProjectsData , getDataProject } from './projects.js';
-import { fetchGallerysData,  getDataGallery } from './galeria.js'
-import { formSubmit } from './formulario.js';
+import { fetchPlantsData, getDataPlants } from './Componentes/plants.js'
+import { fetchProjectsData , getDataProject } from './Componentes/projects.js';
+import { fetchGallerysData,  getDataGallery } from './Componentes/galeria.js'
+import { formSubmit } from './Componentes/formulario.js';
 
 /*'[{"plantName":"Mercurio", "plantPercent":"3.49", "plantDiametro":"4.880"},{"plantName":"Venus", "plantPercent":"8.66", "plantDiametro":"12.104"},{"plantName":"Tierra", "plantPercent":"9.11", "plantDiametro":"12.742"},{"plantName":"Marte", "plantPercent":"4.85", "plantDiametro":"6.779"},{"plantName":"Jupiter", "plantPercent":"100", "plantDiametro":"139.820"},{"plantName":"Saturno", "plantPercent":"83.38", "plantDiametro":"116.460"},{"plantName":"Urano", "plantPercent":"36.25", "plantDiametro":"50.724"},{"plantName":"Neptuno", "plantPercent":"35.23", "plantDiametro":"49.244"}]';*/
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/login.css">
+    <link rel="shortcut icon" href="../../emb/img/logo.png" type="image/x-icon">
+    <script type="module" src="../../src/admin/loadGalleryTable.js"></script>
+    <script type="module" src="../../src/admin/loadPlantsTable.js"></script>
+    <script type="module" src="../../src/admin/loadProjectsTable.js"></script>
+    <script type="module" src="../../src/admin/loadContactTable.js"></script>
+    <title>Astronomía Universal</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header-img" src="../../emb/img/logo.png" alt="" id="logo">
+        <h1 class="header-titulo">Astronomía Universal</h1>
+        <button onclick="location.href='../login.html'">Cerrar Sesión</button>
+    </header>
+    <main class="contenido-principal" id="section">
+        <div class="section_componentes">
+            <button class="consulta" onclick="location.href=''">Galeria</button>
+            <button class="consulta" onclick="location.href=''">Planetas</button>
+            <button class="consulta" onclick="location.href=''">Proyectos</button>
+            <button class="consulta" onclick="location.href=''">Contactos</button>
+        </div>
+        <section class="gallety_data" id="gallety_data">
+            <h2 class="table_title">Galeria</h2>
+            <div class="gallety-responsive" id="gallery_container">
+            </div>
+        </section>
+        <section class="table_data" id="table_data">
+            <h2 class="table_title">Planetas</h2>
+            <div class="table-responsive" id="table_container">
+            </div>
+        </section>
+        <section class="project_data" id="project_data">
+            <h2 class="table_title">Proyectos</h2>
+            <div class="table-responsive" id="project_container">
+            </div>
+        </section>
+        <section class="contact_data" id="contact_data">
+            <h2 class="table_title">Contactos</h2>
+            <div class="table-responsive" id="contact_container">
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><p class="footer-texto">Desarrollo Full Stack <span class="footer-texto-curso">DWFSH1-276</span></p>
+        <p class="footer-texto-correo">📧<a class="footer-texto-correo-a" href="mailto:info@astronomiauniversal.com">info@astronomiauniversal.com</a></p>
+    </footer>
+</body>
+</html>

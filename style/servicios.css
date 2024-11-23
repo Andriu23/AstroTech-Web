@@ -66,28 +66,21 @@ header, main, footer {
     font-size: 18px;
 }
 button { 
-    background-color: #1E90FF; /* Azul cielo */ 
-    border: 2px solid #00BFFF; /* Azul más claro */ 
+    background-color: #FF6347; /* Azul cielo */ 
+    border: none; /* Azul más claro */ 
     color: white; 
     padding: 15px 25px; 
     text-align: center; 
-    text-decoration: none; 
     display: inline-block; 
     font-size: 18px; 
     margin: 10px 2px; 
     cursor: pointer; 
     border-radius: 12px; 
-    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5); /* Resplandor */
-}
-button a { 
-    color: white; 
-    text-decoration: none;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5); /* Resplandor */
 }
 button:hover { 
-    background-color: #00BFFF; /* Azul más claro al pasar el ratón */
-}
-button a:hover { 
-    text-decoration: underline;
+    background-color: #ff4500; /* Azul más claro al pasar el ratón */
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
 }
 button:active { 
     background-color: #1C6EA4; 
@@ -95,13 +88,11 @@ button:active {
     transform: translateY(4px);
 }
 .contenido-principal {
-    background: linear-gradient(to bottom, #000428, #004e92);
     min-height: 75vh;
-    /*box-sizing: border-box;
-    background-image: url(../emb/img/fondo.avif);
-    background-position: center;
+    background: linear-gradient(rgba(0, 8, 64, 0.2), rgba(0, 36, 128, 0.2)), url(https://images.unsplash.com/photo-1451187580459-43490279c0fa);
     background-size: cover;
-    background-attachment: fixed;*/
+    background-position: center;
+    background-attachment: fixed;
 }
 .section {
     display: flex;

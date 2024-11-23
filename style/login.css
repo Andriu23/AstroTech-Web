@@ -1,0 +1,310 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    min-height: 20vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    box-shadow: 0 0 20px gold;
+}
+
+.header-titulo {
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    font-size: 48px;
+    text-align: center;
+}
+
+.navegador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+.navegador-items {
+    color: #FFFFFF;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: transform 2s ease;
+}
+
+.navegador-items:hover {
+    background-color: #FFFF00; 
+    color: #000000;
+    transform: scale(1.2);
+}
+
+.navegador-items:active {
+    background-color: #357EDD;
+    color: #FFFFFF;
+    text-decoration: underline;
+    transform: scale(0.8);
+}
+
+button { 
+    background-color: #FF6347;/* Azul cielo */ 
+    border: none; /* Azul más claro */ 
+    color: white; 
+    padding: 15px 25px; 
+    text-align: center; 
+    display: inline-block; 
+    font-size: 18px; 
+    margin: 10px 2px; 
+    cursor: pointer; 
+    border-radius: 12px; 
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Resplandor */
+}
+
+button:hover { 
+    background-color: #45a049; /* Azul más claro al pasar el ratón */
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.8);
+}
+
+button:active { 
+    background-color: #1C6EA4; 
+    transform: translateY(4px);
+}
+
+.contenido-principal {
+    min-height: 70vh;
+    background: linear-gradient(rgba(0, 8, 64, 0.2), rgba(0, 36, 128, 0.2)), url(https://images.unsplash.com/photo-1451187580459-43490279c0fa);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    background-color: #f0f0f0;
+    width: 50%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #FFFFFF;
+}
+
+#contacto {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.fieldset {
+    width: 90%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: none;
+}
+
+.fieldset label {
+    width: 80%;
+    font-size: 16px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.fieldset input {
+    width: 70%;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 5px ;
+    border: 1px double #357EDD;
+}
+
+.formulario input[type="submit"] {
+    margin: 10px auto;
+    background-color: rgba(0, 0, 139, 1);
+    color: rgba(255, 255, 0, 1);
+    padding: 10px 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.formulario input[type="submit"]:hover {
+    animation: neon 3s infinite alternate backwards;
+}
+@keyframes neon {
+    0% {
+        border: 2px solid #1C6EA4;
+        background-color: rgba(255, 255, 0, 1);
+        color: #1C6EA4;
+    } 
+    50% {
+        border: 2px solid #45a049;
+        background-color: #FFFFFF;
+        color: #45a049;
+    }
+    100% {
+        border: 2px solid #FFFFFF;
+        background-color:  #1C6EA4; 
+        color: #FFFFFF;
+    }
+}
+
+.formulario input[type="submit"]:active {
+    background-color: #45a049;
+    color: #FFFFFF;
+}
+
+.footer {
+    width: 100%;
+    min-height: 10vh;
+     /*background-color: #001f3f;*/
+     background-color: #000000;
+     color: #FFFFFF;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+     justify-items: center; 
+     align-items: center;
+}
+
+.footer-texto-curso {
+    color: #FFD700;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: overline;
+}
+
+.footer-texto-correo {
+    background-color: #FFFFFF;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.footer-texto-correo:hover {
+    background-color: #FFFF00;
+}
+
+.footer-texto-correo-a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Estilo indexAdmin.html */
+
+.section_componentes {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#section {
+    flex-direction: column;
+    justify-content: start;
+}
+
+.consulta {
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white; 
+    padding: 15px 30px; 
+    font-size: 18px; 
+    border-radius: 12px; 
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+}
+
+.consulta:hover { 
+    background-color: rgba(0, 191, 255, 0.5);
+    transform: scale(1.05); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.consulta:active { 
+    background-color: rgba(0, 0, 0, 0.9); 
+    transform: scale(1); 
+    background-color: #4CAF50;
+    text-decoration: underline;
+}
+
+.table_data, .gallety_data, .project_data, .contact_data {
+    background-color: rgba(240, 240, 240, 0.5);
+    color: #000033;
+    margin: 35px 0px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    border-radius: 20px;
+}
+
+.table_title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.table-responsive {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.table {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    background-color: #FFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 139, 0.8);
+    border-radius: 5px;
+}
+
+.table thead {
+    background-color: rgba(0, 0, 139, 0.7);
+    color: #FFF;
+}
+
+.table thead th {
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #eae3d7;
+}
+
+.table tbody td {
+    padding: 8px 12px;
+    color: #444;
+}
