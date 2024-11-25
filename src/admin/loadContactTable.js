@@ -19,9 +19,9 @@ const createTableContact = async () => {
     const tableHeadEdit = document.createElement('th');
     const tableHeadDelete = document.createElement('th');
     tableHeadId.appendChild(document.createTextNode('Id'));
-    tableHeadName.appendChild(document.createTextNode('Icono Planetario'));
-    tableHeadEmail.appendChild(document.createTextNode('Planeta'));
-    tableHeadPhone.appendChild(document.createTextNode('Porcentaje'));
+    tableHeadName.appendChild(document.createTextNode('Nombre'));
+    tableHeadEmail.appendChild(document.createTextNode('Email'));
+    tableHeadPhone.appendChild(document.createTextNode('Teléfono'));
     tableHeadEdit.appendChild(document.createTextNode('Editar'));
     tableHeadDelete.appendChild(document.createTextNode('Eliminar'));
     tableHeadRow.appendChild(tableHeadId);

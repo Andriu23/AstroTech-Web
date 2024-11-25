@@ -15,6 +15,8 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
 }
 
 .header-img {
@@ -217,6 +219,8 @@ button:active {
     width: 80%;
     display: flex;
     justify-content: space-around;
+    position: sticky;
+    top: 20vh;
     
 }
 
@@ -247,7 +251,11 @@ button:active {
     text-decoration: underline;
 }
 
-.table_data, .gallety_data, .project_data, .contact_data {
+.hidden {
+    display: none;
+}
+
+.table_data, .gallery_data, .project_data, .contact_data {
     background-color: rgba(240, 240, 240, 0.5);
     color: #000033;
     margin: 35px 0px;
@@ -257,6 +265,7 @@ button:active {
     align-items: center;
     padding: 20px 0px;
     border-radius: 20px;
+    scroll-margin-top: 20vh;
 }
 
 .table_title {
@@ -307,4 +316,18 @@ button:active {
 .table tbody td {
     padding: 8px 12px;
     color: #444;
+}
+
+#formEditPlant, #formEditProject {
+    display: flex;
+    flex-direction: column;
+}
+
+.mostrar {
+    background-color: #FFFFFF;
+    color:  rgba(0, 0, 139, 0.7);
+}
+
+.mostrar:hover {
+    color: #FFFFFF;
 }

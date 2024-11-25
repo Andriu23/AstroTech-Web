@@ -2,6 +2,12 @@ import { getDataProject } from "../Componentes/projects.js";
 
 window.addEventListener('load', async () => {
     await createTableProject();
+    document.querySelectorAll(".button-Editar").forEach(button => {
+        button.addEventListener('click', (event) => {
+         const projectId = event.target.id;
+         location.href = `editProject.html?projectId=${projectId}`;
+        }); 
+     });
 });
 
 const createTableProject = async () => {
@@ -63,8 +69,8 @@ const createRows = (data) => {
         img.style.overflow = 'hidden';
         tableDataImage.appendChild(img);
 
-        tableDataEdit.appendChild(buttonComponent('Editar'));
-        tableDataDelete.appendChild(buttonComponent('Eliminar'));
+        tableDataEdit.appendChild(buttonComponent('Editar', element._id));
+        tableDataDelete.appendChild(buttonComponent('Eliminar', element._id));
 
         tableRow.appendChild(tableDataId);
         tableRow.appendChild(tableDataName);
@@ -82,10 +88,11 @@ const createRows = (data) => {
  * @param {*} buttonLabel 
  * @returns 
  */
-const buttonComponent = (buttonLabel) => {
+const buttonComponent = (buttonLabel, id) => {
     const button = document.createElement('button');
-    button.setAttribute('class', 'button');
+    button.setAttribute('class', `button button-${buttonLabel}`);
+    button.setAttribute('id', id);
     button.style.padding = "10px";
     button.appendChild(document.createTextNode(buttonLabel));
     return button;
-};
+}; 

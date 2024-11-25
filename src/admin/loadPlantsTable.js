@@ -2,6 +2,12 @@ import { getDataPlants } from "../Componentes/plants.js";
 
 window.addEventListener('load', async () => {
     await createTablePlants();
+    document.querySelectorAll(".button-Editar").forEach(button => {
+       button.addEventListener('click', (event) => {
+        const planetId = event.target.id;
+        location.href = `editPlant.html?planetId=${planetId}`;
+       }); 
+    });
 });
 
 /**
@@ -72,8 +78,8 @@ const createRows = (data) => {
         img.style.overflow = 'hidden';
         tableDataImg.appendChild(img);
 
-        tableDataEdit.appendChild(buttonComponent('Editar'));
-        tableDataDelete.appendChild(buttonComponent('Eliminar'));
+        tableDataEdit.appendChild(buttonComponent('Editar', element._id));
+        tableDataDelete.appendChild(buttonComponent('Eliminar', element._id));
         tableRow.appendChild(tableDataId);
         tableRow.appendChild(tableDataImg);
         tableRow.appendChild(tableDataName);
@@ -92,9 +98,10 @@ const createRows = (data) => {
  * @param {*} buttonLabel 
  * @returns 
  */
-const buttonComponent = (buttonLabel) => {
+const buttonComponent = (buttonLabel, id) => {
     const button = document.createElement('button');
-    button.setAttribute('class', 'button');
+    button.setAttribute('class', `button button-${buttonLabel}`);
+    button.setAttribute('id', id);
     button.style.padding = "10px";
     button.appendChild(document.createTextNode(buttonLabel));
     return button;

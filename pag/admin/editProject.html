@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/login.css">
     <link rel="shortcut icon" href="../../emb/img/logo.png" type="image/x-icon">
-    <script type="module" src="../../src/admin/loadPlantsTable.js"></script>
+    <script type="module" src="../../src/admin/editProject.js"></script>
+
     <title>Astronomía Universal</title>
 </head>
 <body>
@@ -14,18 +15,22 @@
         <h1 class="header-titulo">Astronomía Universal</h1>
         <button onclick="location.href='../login.html'">Cerrar Sesión</button>
     </header>
-    <main class="contenido-principal" id="section">
+    <main class="contenido-principal" id="formEditProject">
         <div class="section_componentes">
-            <button class="consulta" id="gallery" onclick="location.href='./indexGallery.html'">Galeria</button>
-            <button class="consulta mostrar" id="planets" onclick="location.href='#'">Planetas</button>
-            <button class="consulta" id="projects" onclick="location.href='./indexProject.html'">Proyectos</button>
-            <button class="consulta" id="contacts" onclick="location.href='./indexContact.html'">Contactos</button>
+            <button class="consulta" id="projects" onclick="location.href='indexProject.html#project_data'">Projectos</button>
         </div>
-        <section class="table_data hidden" id="table_data">
-            <h2 class="table_title">Planetas</h2>
-            <div class="table-responsive" id="table_container">
-            </div>
-        </section>
+        <form action="" class="formulario" id="editPProjectForm">
+            <h2 id="contacto">Editar Projectos</h2>
+            <fieldset class="fieldset">
+                <label for="id_project">id:</label>
+                <input type="text" id="id_project" disabled>
+                <label for="nombre_project">Nombre:</label>
+                <input type="text" id="nombre_project" disabled>
+                <label for="icono">Imagen:</label>
+                <input type="url" id="icono">
+            </fieldset>
+            <input type="submit" value="Actualizar">
+        </form>
     </main>
     <footer class="footer"><p class="footer-texto">Desarrollo Full Stack <span class="footer-texto-curso">DWFSH1-276</span></p>
         <p class="footer-texto-correo">📧<a class="footer-texto-correo-a" href="mailto:info@astronomiauniversal.com">info@astronomiauniversal.com</a></p>

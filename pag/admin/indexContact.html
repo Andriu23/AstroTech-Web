@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/login.css">
     <link rel="shortcut icon" href="../../emb/img/logo.png" type="image/x-icon">
-    <script type="module" src="../../src/admin/loadPlantsTable.js"></script>
+    <script type="module" src="../../src/admin/loadContactTable.js"></script>
     <title>Astronomía Universal</title>
 </head>
 <body>
@@ -17,13 +17,13 @@
     <main class="contenido-principal" id="section">
         <div class="section_componentes">
             <button class="consulta" id="gallery" onclick="location.href='./indexGallery.html'">Galeria</button>
-            <button class="consulta mostrar" id="planets" onclick="location.href='#'">Planetas</button>
+            <button class="consulta" id="planets" onclick="location.href='./indexAdmin.html'">Planetas</button>
             <button class="consulta" id="projects" onclick="location.href='./indexProject.html'">Proyectos</button>
-            <button class="consulta" id="contacts" onclick="location.href='./indexContact.html'">Contactos</button>
+            <button class="consulta mostrar" id="contacts" onclick="location.href='#'">Contactos</button>
         </div>
-        <section class="table_data hidden" id="table_data">
-            <h2 class="table_title">Planetas</h2>
-            <div class="table-responsive" id="table_container">
+        <section class="contact_data hidden" id="contact_data">
+            <h2 class="table_title">Contactos</h2>
+            <div class="table-responsive" id="contact_container">
             </div>
         </section>
     </main>
