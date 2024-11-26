@@ -283,123 +283,12 @@ img {
 }
 
 .load_bar {
-    width: 0%;
     padding: 10px 0px;
     font-weight: bold;
     border-radius: 2px;
-}
-
-.diametro_3\.49 {
-    background: linear-gradient(to right, #6e6e6e, #8a8a8a);
-    color: #ffffff;
-    animation: mercurio-bar 3s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    animation-iteration-count: 3;
-}
-@keyframes mercurio-bar {
-    to {
-        width: 3.49%;
-    }
-}
-
-.diametro_8\.66 {
-    background: linear-gradient(to right, #f4d03f, #f9e79f);
-    color: #6e4b0f;
-    animation: venus-bar 3s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    animation-iteration-count: 3;
-}
-@keyframes venus-bar {
-    to {
-        width: 8.66%;
-    }
-}
-
-.diametro_9\.11 {
-    background: linear-gradient(to right, #1e90ff, #76c7c0); 
-    color: #ffffff;
-    animation: tierra-bar 3s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    animation-iteration-count: 3;
-    
-}
-@keyframes tierra-bar {
-    to {
-        width: 9.11%;
-    }
-}
-
-.diametro_4\.85 {
-    background: linear-gradient(to right, #ff4500, #a52a2a);
-    color: #ffffff;
-    animation: marte-bar 3s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    animation-iteration-count: 3;
-}
-@keyframes marte-bar {
-    to {
-        width: 4.85%;
-    }
-}
-
-.diametro_100 {
-    background: linear-gradient(to right, #d2b48c, #ffdead);
-    color: #5e2605;
-    animation: jupiter-bar 3s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    animation-iteration-count: 3;
-}
-@keyframes jupiter-bar {
-    to {
-        width: 100%;
-    }
-}
-
-.diametro_83\.38 {
-    background: linear-gradient(to right, #f5deb3, #e3c565);
-    color: #5e4b2c;
-    animation: saturno-bar 3s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    animation-iteration-count: 3;
-}
-@keyframes saturno-bar {
-    to {
-        width: 83.38%;
-    }
-}
-
-.diametro_36\.25 {
-    background: linear-gradient(to right, #7fffd4, #4682b4);
-    color: #1e2e30;
-    animation: urano-bar 3s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    animation-iteration-count: 3;
-}
-@keyframes urano-bar {
-    to {
-        width: 36.25%;
-    }
-}
-
-.diametro_35\.23 {
-    background: linear-gradient(to right, #fcd440, #e3b636, #fdea78);
-    color: #4f4f4f;
-    animation: neptuno-bar 3s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    animation-iteration-count: 3;
-}
-@keyframes neptuno-bar {
-    to {
-        width: 35.23%;
-    }
+    background-color: #FF000040;
+    color: #FFFFFFBF;
+    border: 2px solid #FFFF00;
 }
 
 .Diametro_km {

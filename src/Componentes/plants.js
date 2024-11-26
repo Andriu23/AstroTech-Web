@@ -18,7 +18,8 @@ const componentPlants = async (name, percent, diametro, img) => {
     image.setAttribute('alt', `${name} image`);
     loadBar.setAttribute('class', 'loading_bar');
     
-    bar.setAttribute('class', `load_bar diametro_${percent}`);
+    bar.setAttribute('class', 'load_bar');
+    bar.setAttribute('style', `width:${percent}%`)
     diametroKm.setAttribute('class', 'Diametro_km', diametro);
     
     imageContainer.appendChild(image);

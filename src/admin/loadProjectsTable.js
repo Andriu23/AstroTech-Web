@@ -8,6 +8,18 @@ window.addEventListener('load', async () => {
          location.href = `editProject.html?projectId=${projectId}`;
         }); 
      });
+
+     document.querySelectorAll(".button-Eliminar").forEach(button => {
+        button.addEventListener('click', async (event) => {
+        const projectId = event.target.id;
+        const userResponse = confirm('Esta seguro en eliminar el Proyecto');
+            if (userResponse) {
+                await deleteProject(projectId);
+                alert('El planeta ha sido eliminado correctamente.');
+                location.href = 'indexProject.html';
+            }
+        }); 
+     });
 });
 
 const createTableProject = async () => {
@@ -95,4 +107,19 @@ const buttonComponent = (buttonLabel, id) => {
     button.style.padding = "10px";
     button.appendChild(document.createTextNode(buttonLabel));
     return button;
-}; 
+};
+
+const deleteProject = async (id) => {
+    try {
+        let response = await fetch(`http://localhost:3000/api/projects/${id}`, 
+            {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+        });
+        return response;
+    } catch (error) {
+        console.error('Hubo un error');
+    }
+};

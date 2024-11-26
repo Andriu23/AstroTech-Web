@@ -3,11 +3,23 @@ import { getDataPlants } from "../Componentes/plants.js";
 window.addEventListener('load', async () => {
     await createTablePlants();
     document.querySelectorAll(".button-Editar").forEach(button => {
-       button.addEventListener('click', (event) => {
+        button.addEventListener('click', (event) => {
         const planetId = event.target.id;
         location.href = `editPlant.html?planetId=${planetId}`;
        }); 
     });
+
+    document.querySelectorAll(".button-Eliminar").forEach(button => {
+        button.addEventListener('click', async (event) => {
+        const planetId = event.target.id;
+        const userResponse = confirm('Esta seguro en eliminar el Planeta');
+            if (userResponse) {
+                await deletePlant(planetId);
+                alert('El planeta ha sido eliminado correctamente.');
+                location.href = 'indexAdmin.html';
+            }
+        }); 
+     });
 });
 
 /**
@@ -106,3 +118,18 @@ const buttonComponent = (buttonLabel, id) => {
     button.appendChild(document.createTextNode(buttonLabel));
     return button;
 }; 
+
+const deletePlant = async (id) => {
+    try {
+        let response = await fetch(`http://localhost:3000/api/plants/${id}`, 
+            {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+        });
+        return response;
+    } catch (error) {
+        console.error('Hubo un error');
+    }
+};
