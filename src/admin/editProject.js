@@ -1,3 +1,5 @@
+const URL_API = 'https://astro-tech-server.vercel.app'
+
 window.addEventListener('load', async () => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -24,7 +26,7 @@ window.addEventListener('load', async () => {
 
 const getDataProjectsById = async (id) => {
     try {
-        let response = await fetch(`http://localhost:3000/api/projects/${id}`);
+        let response = await fetch(`${URL_API}/api/projects/${id}`);
         return await response.json();
     } catch (error) {
         console.error('Hubo un error');
@@ -33,7 +35,7 @@ const getDataProjectsById = async (id) => {
 
 const UpdateProjectData = async (name, img) => {
     try {
-        let response = await fetch(`http://localhost:3000/api/projects?projectName=${name}`, 
+        let response = await fetch(`${URL_API}/api/projects?projectName=${name}`, 
             {
                 method: 'PUT',
                 headers: {

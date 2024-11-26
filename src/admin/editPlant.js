@@ -1,3 +1,5 @@
+const URL_API = 'https://astro-tech-server.vercel.app'
+
 window.addEventListener('load', async () => {
     const sessionToken = sessionStorage.getItem('accessToken');
     if (sessionToken !== undefined && sessionToken !== null && sessionToken !== 'null') {
@@ -31,7 +33,7 @@ window.addEventListener('load', async () => {
 const getDataPlantsById = async (id) => {
     try {
         const sessionToken = sessionStorage.getItem('accessToken');
-        let response = await fetch(`http://localhost:3000/api/plants/${id}`, {
+        let response = await fetch(`${URL_API}/api/plants/${id}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `${sessionToken}`
@@ -46,7 +48,7 @@ const getDataPlantsById = async (id) => {
 const UpdatePlantData = async (name, percent, diametro) => {
     try {
         const sessionToken = sessionStorage.getItem('accessToken');
-        let response = await fetch(`http://localhost:3000/api/plants?plantName=${name}`, 
+        let response = await fetch(`${URL_API}/api/plants?plantName=${name}`, 
             {
                 method: 'PUT',
                 headers: {

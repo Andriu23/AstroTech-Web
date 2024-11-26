@@ -1,3 +1,5 @@
+const URL_API = 'https://astro-tech-server.vercel.app'
+
 window.addEventListener('load', () => {
     const formularioLogin = document.getElementById('Formulario_Login');
 
@@ -19,7 +21,7 @@ window.addEventListener('load', () => {
 
 export const getDataUser = async (userName, password) => {
     try {
-        let response = await fetch('http://localhost:3000/api/getUsers', 
+        let response = await fetch(`${URL_API}/api/getUsers`, 
             {
                 method: 'POST',
                 headers: {

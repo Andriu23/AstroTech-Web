@@ -1,3 +1,5 @@
+const URL_API = 'https://astro-tech-server.vercel.app'
+
 const componentGallery = async (imageGallery) => {
     const gallery = document.createElement('div');
     gallery.setAttribute('class', 'astronomía');
@@ -22,7 +24,7 @@ export const fetchGallerysData = async (GalleryDataPayload) => {
 
 export const getDataGallery = async () => {
     try {
-        let response = await fetch('http://localhost:3000/api/gallery');
+        let response = await fetch(`${URL_API}/api/gallery`);
         return await response.json();
     } catch (error) {
         console.error('Hubo un error');

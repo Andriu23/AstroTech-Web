@@ -1,5 +1,7 @@
 import { getDataPlants } from "../Componentes/plants.js";
 
+const URL_API = 'https://astro-tech-server.vercel.app'
+
 window.addEventListener('load', async () => {
     const sessionToken = sessionStorage.getItem('accessToken');
     if (sessionToken !== undefined && sessionToken !== null && sessionToken !== 'null') {
@@ -128,7 +130,7 @@ const buttonComponent = (buttonLabel, id) => {
 const deletePlant = async (id) => {
     try {
         const sessionToken = sessionStorage.getItem('accessToken');
-        let response = await fetch(`http://localhost:3000/api/plants/${id}`, 
+        let response = await fetch(`${URL_API}/api/plants/${id}`, 
             {
                 method: 'DELETE',
                 headers: {

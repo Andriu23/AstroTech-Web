@@ -1,5 +1,7 @@
 import { getDataProject } from "../Componentes/projects.js";
 
+const URL_API = 'https://astro-tech-server.vercel.app'
+
 window.addEventListener('load', async () => {
     await createTableProject();
     document.querySelectorAll(".button-Editar").forEach(button => {
@@ -111,7 +113,7 @@ const buttonComponent = (buttonLabel, id) => {
 
 const deleteProject = async (id) => {
     try {
-        let response = await fetch(`http://localhost:3000/api/projects/${id}`, 
+        let response = await fetch(`${URL_API}/api/projects/${id}`, 
             {
                 method: 'DELETE',
                 headers: {

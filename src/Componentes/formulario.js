@@ -1,3 +1,5 @@
+const URL_API = 'https://astro-tech-server.vercel.app'
+
 export const formSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -18,7 +20,7 @@ export const formSubmit = async (event) => {
                 message
             };
             console.log(mensajeComplete);
-            await fetch('http://localhost:3000/api/contacts', {
+            await fetch(`${URL_API}/api/contacts`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -35,7 +37,7 @@ export const formSubmit = async (event) => {
 
 export const getDataContact = async () => {
     try {
-        let response = await fetch('http://localhost:3000/api/contacts');
+        let response = await fetch(`${URL_API}/api/contacts`);
         return await response.json();
     } catch (error) {
         console.error('Hubo un error');

@@ -1,3 +1,5 @@
+const URL_API = 'https://astro-tech-server.vercel.app'
+
 const componentPlants = async (name, percent, diametro, img) => {
     const listItem = document.createElement('li'); // planet_location
     const imageContainer = document.createElement('div');
@@ -50,7 +52,7 @@ export const fetchPlantsData = async (plantDataPayload) => {
 
 export const getDataPlants = async () => {
     try {
-        let response = await fetch('http://localhost:3000/api/plants');
+        let response = await fetch(`${URL_API}/api/plants`);
         return await response.json();
     } catch (error) {
         console.error('Hubo un error');
