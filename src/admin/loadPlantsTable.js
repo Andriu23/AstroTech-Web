@@ -1,6 +1,8 @@
 import { getDataPlants } from "../Componentes/plants.js";
 
 window.addEventListener('load', async () => {
+    const sessionToken = sessionStorage.getItem('accessToken');
+    if (sessionToken !== undefined && sessionToken !== null && sessionToken !== 'null') {
     await createTablePlants();
     document.querySelectorAll(".button-Editar").forEach(button => {
         button.addEventListener('click', (event) => {
@@ -20,6 +22,10 @@ window.addEventListener('load', async () => {
             }
         }); 
      });
+    } else {
+        alert('Por favor Iniciar Sesión');
+        location.href='../login.html';
+    }
 });
 
 /**
@@ -121,11 +127,13 @@ const buttonComponent = (buttonLabel, id) => {
 
 const deletePlant = async (id) => {
     try {
+        const sessionToken = sessionStorage.getItem('accessToken');
         let response = await fetch(`http://localhost:3000/api/plants/${id}`, 
             {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': `${sessionToken}`
                 },
         });
         return response;
