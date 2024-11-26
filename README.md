@@ -50,6 +50,8 @@
    ```bash
    git clone https://github.com/Andriu23/AstroTech-Web.git
 
+   El proyecto está desplegado en Vercel y puede ser visitado en el siguiente enlace: https://astro-tech-web.vercel.app/
+
 
 -----------------------------------------------------------
 
